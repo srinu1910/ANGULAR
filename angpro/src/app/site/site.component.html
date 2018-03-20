@@ -1,0 +1,40 @@
+<p>-----------------------------------------------------------</p>
+<ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+Logo : <img [src]="website.logo" />
+<br/> Log - bindkey : <img bind-src="website.logo" />
+<br/> Log - bindwith exprasation : <img src="{{website.logo}}" />
+<br/> href : <img src="{{website.logo}}" />
+
+<br/>Url:
+<a [href]="website.url" [textContent]="website.name"> </a>
+
+<br/>Url:
+<a bind-href="website.url" bind-textContent="website.name"> </a>
+
+<br/>Url:
+<a href="{{website.url}}" textContent="{{website.name}}"> </a>
+
+<p [textContent]="website.description"> </p>
+
+<p bind-textContent="website.description"> </p>
+
+<p textContent="{{website.description}}"> </p>
+
+<br/><button [disabled]="flag">Submit</button>
+
+<br/><button bin-disabled="!flag">Submit</button>
+
+<br/> Directive binding
+<p [ngClass]="'one two'"> Angular 2 Property Binding Example </p><br/>
+<p bind-ngClass="'one two'"> Angular 2 Property Binding Example </p><br/>
+<p ngClass="{{'one two'}}"> Angular 2 Property Binding Example </p><br/>
+<app-msg [siteName]="website.name"> </app-msg><br/>
+
+<app-msg bind-siteName="website.name"> </app-msg><br/>
+
+<app-msg siteName="{{website.name}}"> </app-msg><br/>
+
+<app-msg prefixMsg="Website name is "> </app-msg><br/>
+<app-msg prefixMsg="Website name is " [siteName]="website.name"> </app-msg>
